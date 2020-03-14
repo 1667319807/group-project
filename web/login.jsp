@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD><TITLE>96909ÉçÇøÉú»î·şÎñÖĞĞÄÉí·İÈ·ÈÏÏµÍ³</TITLE>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<HTML><HEAD><TITLE>96909ç¤¾åŒºç”Ÿæ´»æœåŠ¡ä¸­å¿ƒèº«ä»½ç¡®è®¤ç³»ç»Ÿ</TITLE>
 <META http-equiv=Content-Type content="text/html; charset=gb2312">
 <META name=GENERATOR content="MSHTML 8.00.6001.18783">
 <STYLE type=text/css>
@@ -8,7 +8,7 @@
 }
 BODY {
 	MARGIN: 0px;
-	background-image: url(ny/IMAGE/l_bg.jpg);
+	background-image: url(ny/image/l_bg.jpg);
 	background-repeat: repeat-x;
 }
 .text {
@@ -18,7 +18,7 @@ BODY {
 	BORDER-BOTTOM: #8b8c8d 1px dashed; BORDER-LEFT: #8b8c8d 1px dashed; BORDER-TOP: #8b8c8d 1px dashed; BORDER-RIGHT: #8b8c8d 1px dashed
 }
 </STYLE>
-<LINK rel=stylesheet type=text/css href="ny/css/index.css">
+<LINK rel=stylesheet type=text/css href="ny/css/INDEX.css">
 <style type="text/css">
 <!--
 .STYLE1 {color: #333333;
@@ -33,7 +33,7 @@ BODY {
 <TABLE cellSpacing=0 cellPadding=0 width=1001 align=center height=595>
   
   <TR>
-    <TD background="ny/IMAGE/ov2.jpg"><TABLE width=650 height="378"  border="0" 
+    <TD background="ny/image/ov2.jpg"><TABLE width=650 height="378"  border="0"
       align=center 
       cellPadding=0 cellSpacing=0>
       <TR>
@@ -48,13 +48,13 @@ BODY {
                         color=red></font></td>
               </tr>
               <tr>
-                <td width="34%" height=36 align=right class=STYLE1>ÓÃ»§Ãû£º</td>
+                <td width="34%" height=36 align=right class=STYLE1>ç”¨æˆ·åï¼š</td>
                 <td height=36 width="66%" align=left><input 
                         style="WIDTH: 120px" class=input name=j_username></td>
               </tr>
               <tr align=middle>
                 <td height=20 
-                        align=right class=STYLE1>ÃÜ&nbsp;&nbsp;Âë£º</td>
+                        align=right class=STYLE1>å¯†&nbsp;&nbsp;ç ï¼š</td>
                 <td height=20 align=left><input style="WIDTH: 120px" 
                         class=input value=1 type=password name=j_password></td>
               </tr>
@@ -62,9 +62,9 @@ BODY {
                 <td height=20 colspan=2>&nbsp;</td>
               </tr>
               <tr align=middle>
-                <td height=20 colspan=2 align="center"><input class=button_new value="µÇ Â¼" type=submit name=Submit2 onClick="javascript:location.href='ny/index.htm'">
+                <td height=20 colspan=2 align="center"><input class=button_new value="ç™» å½•" type=submit name=Submit2 onClick="javascript:location.href='ny/index.htm'">
                   &nbsp; &nbsp;
-                  <input class=button_new value="ÖØ ÖÃ" type=reset name=Submit></td>
+                  <input class=button_new value="é‡ ç½®" type=reset name=Submit></td>
               </tr>
             </table></td>
           </tr>
