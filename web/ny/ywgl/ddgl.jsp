@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link href="../css/index.css" rel="stylesheet" type="text/css">
 <link href="../css/button.css" rel="stylesheet" type="text/css">
 <html>
@@ -21,7 +23,7 @@ function doDBClick(url,operator,type) {
 
 <table width="100%"  border="0" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF" class="where">
   <tr>
-    <td>&nbsp;&nbsp;¡ù&nbsp;ÄúµÄÎ»ÖÃ£ºÎÒµÄ×ÀÃæ--&gt;ÒµÎñ¹ÜÀí--&gt;ÓÃ¹¤¹ÜÀí</td>
+    <td>&nbsp;&nbsp;&nbsp;æ‚¨çš„ä½ç½®:æˆ‘çš„æ¡Œé¢-->ä¸šåŠ¡ç®¡ç†-->ç”¨å·¥ç®¡ç†</td>
     <td align="right">&nbsp;</td>
   </tr>
 </table>
@@ -30,24 +32,24 @@ function doDBClick(url,operator,type) {
 
   <table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" class="MENU_line">
     <tr>
-      <td width="67%" align="right" class="text" nowrap>&nbsp;¹ÍÖ÷£º
+      <td width="67%" align="right" class="text" nowrap>&nbsp;é›‡ä¸»
         <input type="text" name="searchName" maxlength="20" size="12" value="" class="input">
-        &nbsp; µÇ¼ÇÈÕÆÚ£º
+        &nbsp; ç™»è®°æ—¥æœŸ
         <input type="text" name="searchName2" maxlength="20" size="12" value="" class="input">
-        µ½
+        åˆ°
         <input type="text" name="searchName4" maxlength="20" size="12" value="" class="input">
-        &nbsp; ¹ÍÓÃ¹¤ÈË£º
+        &nbsp; é›‡ç”¨å·¥äºº
         <input type="text" name="searchName4" maxlength="20" size="12" value="" class="input">
-&nbsp;×´Ì¬£º
+&nbsp;çŠ¶æ€
 <select name="select" id="select" class="input">
-  <option selected>ÇëÑ¡Ôñ</option>
-  <option>Î´³É½»</option>
-  <option>ÒÑ³É½»</option>
-  <option>ÔÚ±ğ´¦³É½»</option>
-  <option>ÒÑÈ¡Ïû</option>
+  <option selected>è¯·é€‰æ‹©</option>
+  <option value="1">æœªæˆäº¤</option>
+  <option value="2">å·²æˆäº¤</option>
+  <option value="3">åœ¨åˆ«å¤„æˆäº¤</option>
+  <option value="4">å·²å–æ¶ˆ</option>
 </select>
-        <input type="button" name="searchbtn" value="²é  Ñ¯" class="button_new">
-        <input type="button" name="searchbtn2" value="ĞÂ  Ôö" class="button_new"onClick="javascript:location.href='ddgl_xz.htm'" >
+        <input type="button" name="searchbtn" value="æŸ¥è¯¢" class="button_new">
+        <input type="button" name="searchbtn2" value="æ–°å¢" class="button_new"onClick="javascript:location.href='ddgl_xz.htm'" >
         
       &nbsp;&nbsp; </td>
     </tr>
@@ -55,26 +57,26 @@ function doDBClick(url,operator,type) {
 <br>
   <table width="96%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#bdc7d3">
     <tr align="center" class="tdtitle">
-      <td nowrap align="center" width="4%">ĞòºÅ</td>
-      <td width="8%" align="center" nowrap id=".name" >¹ÍÖ÷</td>
-      <td width="6%" height="24" align="center" nowrap id=".name" ><div align="center" orderBy="true">ÊÖ»ú/¹Ì</div></td>
-      <td width="16%" height="24" align="center" nowrap id=".phone" ><div align="center" orderBy="true">¹¤ÈË</div></td>
-      <td width="11%" align="center" nowrap id=".title" ><div align="center" orderBy="true">ÊÖ»ú/¹Ì</div></td>
-      <td width="7%" align="center" nowrap id=".register" ><div align="center" orderBy="true">¹¤×Ê/ÔÂ</div></td>
-      <td width="31%" align="center" nowrap id=".register" ><strong>¹¤×÷ÀàĞÍ</strong></td>
-      <td width="8%" align="center" nowrap id=".submit_date" ><strong>×´Ì¬</strong></td>
-      <td width="9%" align="center" nowrap id=".submit_date" ><strong>²Ù×÷</strong></td>
+      <td nowrap align="center" width="4%">åºå·</td>
+      <td width="8%" align="center" nowrap >é›‡ä¸»</td>
+      <td width="6%" height="24" align="center" nowrap id=".name" ><div align="center" orderBy="true">æ‰‹æœº/å›º</div></td>
+      <td width="16%" height="24" align="center" nowrap id=".phone" ><div align="center" orderBy="true">å·¥äºº</div></td>
+      <td width="11%" align="center" nowrap id=".title" ><div align="center" orderBy="true">æ‰‹æœº/å›º</div></td>
+      <td width="7%" align="center" nowrap id="register" ><div align="center" orderBy="true">å·¥èµ„/æœˆ</div></td>
+      <td width="31%" align="center" nowrap id=".register" ><strong>å·¥ä½œç±»å‹</strong></td>
+      <td width="8%" align="center" nowrap id=".submit_date" ><strong>çŠ¶æ€</strong></td>
+      <td width="9%" align="center" nowrap id="submit_date" ><strong>æ“ä½œ</strong></td>
     </tr>
     <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" onDblClick="doDBClick('bl.htm',true,'2');">
       <td nowrap align="center" width="4%">1 </td>
-      <td align="center" nowrap>ÕÅÈı</td>
+      <td align="center" nowrap>XX</td>
       <td height="14" align="center" nowrap>13527612667/38468063</td>
-      <td align="center" nowrap>ÕÅÃ·</td>
+      <td align="center" nowrap>XX</td>
       <td align="center" nowrap>13527612667/38468063</td>
       <td align="center" nowrap>2200</td>
-      <td align="center" nowrap>±£Ä·/ÖÓµã¹¤</td>
-      <td align="center" nowrap>Î´³É½»</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">²é¿´</a> <a href="ddgl_xg.htm">ĞŞ¸Ä</a></td>
+      <td align="center" nowrap>ä¿å§†/é’Ÿç‚¹å·¥</td>
+      <td align="center" nowrap>æœªæˆäº¤</td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">æŸ¥çœ‹</a> <a href="ddgl_xg.htm">ä¿®æ”¹</a></td>
     </tr>
     <tr align="center" class="td1"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">2 </td>
@@ -84,8 +86,8 @@ function doDBClick(url,operator,type) {
       <td align="left" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>ÒÑ³É½»</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">²é¿´</a> <a href="ddgl_xg.htm">ĞŞ¸Ä</a></td>
+      <td align="center" nowrap>æœªæˆäº¤</td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">æŸ¥çœ‹</a> <a href="ddgl_xg.htm">ä¿®æ”¹</a></td>
     </tr>
     <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">3 </td>
@@ -96,7 +98,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">²é¿´</a> <a href="ddgl_xg.htm">ĞŞ¸Ä</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">æŸ¥çœ‹</a> <a href="ddgl_xg.htm">ä¿®æ”¹</a></td>
     </tr>
     <tr align="center" class="td1"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">4 </td>
@@ -107,7 +109,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">²é¿´</a> <a href="ddgl_xg.htm">ĞŞ¸Ä</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">æŸ¥çœ‹</a> <a href="ddgl_xg.htm">ä¿®æ”¹</a></td>
     </tr>
     <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">5 </td>
@@ -118,7 +120,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">²é¿´</a> <a href="ddgl_xg.htm">ĞŞ¸Ä</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">æŸ¥çœ‹</a> <a href="ddgl_xg.htm">ä¿®æ”¹</a></td>
     </tr>
   </table>
 <table width="96%" height="10"  border="0" align="center" cellpadding="0" cellspacing="0">
@@ -127,11 +129,11 @@ function doDBClick(url,operator,type) {
           <input type="hidden" name="orderFid" value=".submit_date">
           <table width="90%" style="font-size:12px;" border="0" cellspacing="3" cellpadding="2">
             <tr>
-              <td nowrap width="45%" align="center"> µ±Ç°µÚ1Ò³ ¹²5¼ÇÂ¼ ·Ö1Ò³ÏÔÊ¾ </td>
+              <td nowrap width="45%" align="center"> å½“å‰ç¬¬ä¸€é¡µï¼Œå…±10æ¡è®°å½•ï¼Œåˆ†1é¡µæ˜¾ç¤º </td>
               <td nowrap width="55%" align="right"><input type="hidden" name="currentPage" value="1">
                   <input type="hidden" name="paginationAction" value="">
-                  <img src="../image/First_no.gif" alt="µÚÒ»Ò³" width="18" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Previous_no.gif" alt="ÉÏÒ»Ò³" width="14" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Next_no.gif" alt="ÏÂÒ»Ò³" width="14" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Last_no.gif" alt="×îºóÒ»Ò³" width="18" height="13" border="0">&nbsp&nbsp&nbsp <a href="javascript:this.document.AwaitForm.submit()" oncontextmenu="return false" onClick="if(this.document.AwaitForm.pageSelect.value==''){ alert('Ò³Âë±ØĞëÊäÈë');return false;}
- else {this.document.AwaitForm.paginationAction.value='gotoPage';}">Ç°Íù</a>
+                  <img src="../image/First_no.gif" alt="ï¿½ï¿½Ò»Ò³" width="18" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Previous_no.gif" alt="ï¿½ï¿½Ò»Ò³" width="14" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Next_no.gif" alt="ï¿½ï¿½Ò»Ò³" width="14" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Last_no.gif" alt="ï¿½ï¿½ï¿½Ò»Ò³" width="18" height="13" border="0">&nbsp&nbsp&nbsp <a href="javascript:this.document.AwaitForm.submit()" oncontextmenu="return false" onClick="if(this.document.AwaitForm.pageSelect.value==''){ alert('Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');return false;}
+ else {this.document.AwaitForm.paginationAction.value='gotoPage';}">å‰å¾€</a>
                   <input type=text size='4' onlytype='int' onfocus='checkTextBoxInput()' name='pageSelect' value=''/>
                 Ò³ </td>
             </tr>
