@@ -1,6 +1,7 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html><head><title>96909社区生活服务中心身份确认系统</title>
+<HTML><HEAD><TITLE>96909社区生活服务中心身份确认系统</TITLE>
+>>>>>>> 25c831e680fcf36409dc8470194d3d8a808bdc83:web/login.htm
 <META http-equiv=Content-Type content="text/html; charset=gb2312">
 <META name=GENERATOR content="MSHTML 8.00.6001.18783">
 <STYLE type=text/css>
@@ -9,7 +10,7 @@
 }
 body {
 	MARGIN: 0px;
-	background-image: url(ny/IMAGE/l_bg.jpg);
+	background-image: url(ny/image/l_bg.jpg);
 	background-repeat: repeat-x;
 }
 .text {
@@ -19,7 +20,7 @@ body {
 	BORDER-BOTTOM: #8b8c8d 1px dashed; BORDER-LEFT: #8b8c8d 1px dashed; BORDER-TOP: #8b8c8d 1px dashed; BORDER-RIGHT: #8b8c8d 1px dashed
 }
 </STYLE>
-<LINK rel=stylesheet type=text/css href="ny/css/index.css">
+<LINK rel=stylesheet type=text/css href="ny/css/INDEX.css">
 <style type="text/css">
 <!--
 .STYLE1 {color: #333333;
@@ -33,8 +34,13 @@ body {
 <body style="MARGIN: 0px;">
 <table cellSpacing=0 cellPadding=0 width=1001 align=center height=595>
   
+<<<<<<< HEAD:web/login.jsp
   <tr>
     <TD background="ny/IMAGE/ov2.jpg"><table width=650 height="378"  border="0" 
+=======
+  <TR>
+    <TD background="ny/image/ov2.jpg"><TABLE width=650 height="378"  border="0"
+>>>>>>> 25c831e680fcf36409dc8470194d3d8a808bdc83:web/login.htm
       align=center 
       cellPadding=0 cellSpacing=0>
       <tr>
@@ -63,7 +69,11 @@ body {
                 <td height=20 colspan=2>&nbsp;</td>
               </tr>
               <tr align=middle>
+<<<<<<< HEAD:web/login.jsp
                 <td height=20 colspan=2 align="center"><input class=button_new value="登 录" type=submit name=Submit2 onClick="javascript:location.href='ny/main.jsp'">
+=======
+                <td height=20 colspan=2 align="center"><input class=button_new value="登 录" type=submit name=Submit2 onClick="javascript:location.href='ny/index.htm'">
+>>>>>>> 25c831e680fcf36409dc8470194d3d8a808bdc83:web/login.htm
                   &nbsp; &nbsp;
                   <input class=button_new value="重 置" type=reset name=Submit></td>
               </tr>

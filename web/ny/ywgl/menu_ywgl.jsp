@@ -110,12 +110,21 @@ body {
   <tr>
     <td  width="14"   class="Menu_OutTd"  id="menutd1">&nbsp;</td>
 	
+<<<<<<< HEAD:web/ny/ywgl/menu_ywgl.jsp
 	<td  width="70" nowrap id="menubar_4"   class="Menu_OutTd">|<a href="grxx_cx.jsp" target="main">用工检索</a></td>
     <td  width="70" nowrap id="menubar_4"   class="Menu_OutTd">|<a href="ddgl.jsp" target="main"> 用工管理</a></td>
     <td  width="70" nowrap id="menubar_5"   class="Menu_OutTd">|<a href="gzxx.jsp" target="main"> 客户管理</a></td>
     
     <td width="70" nowrap  class="Menu_OutTd" id="menubar_10">| <a href="mrtz.jsp" target="main">每日通知</a> </td>
      <td width="70" nowrap  class="Menu_OutTd" id="menubar_10">| <a href="message_list.jsp" target="main">短消息</a> </td>
+=======
+	<td  width="70" nowrap id="menubar_4"   class="Menu_OutTd">|<a href="grxx_cx.jsp" target="main">�ù�����</a></td>
+    <td  width="70" nowrap id="menubar_5"   class="Menu_OutTd">|<a href="ddgl.htm" target="main"> �ù�����</a></td>
+    <td  width="70" nowrap id="menubar_6"   class="Menu_OutTd">|<a href="gzxx.htm" target="main"> �ͻ�����</a></td>
+    
+    <td width="70" nowrap  class="Menu_OutTd" id="menubar_7">| <a href="mrtz.htm" target="main">ÿ��֪ͨ</a> </td>
+     <td width="70" nowrap  class="Menu_OutTd" id="menubar_8">| <a href="message_list.html" target="main">����Ϣ</a> </td>
+>>>>>>> 25c831e680fcf36409dc8470194d3d8a808bdc83:web/ny/ywgl/menu_ywgl.htm
     <td width="676"  nowrap align="right" class="Menu_OutTd"  >&nbsp;</td>
   </tr>
 </table>
