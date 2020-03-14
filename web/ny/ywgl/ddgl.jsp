@@ -49,7 +49,7 @@ function doDBClick(url,operator,type) {
   <option>已取消</option>
 </select>
         <input type="button" name="searchbtn" value="查  询" class="button_new">
-        <input type="button" name="searchbtn2" value="新  增" class="button_new"onClick="javascript:location.href='ddgl_xz.jsp'" >
+        <input type="button" name="searchbtn2" value="新  增" class="button_new"onClick="javascript:location.href='ddgl_xz.htm'" >
         
       &nbsp;&nbsp; </td>
     </tr>
@@ -76,7 +76,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>2200</td>
       <td align="center" nowrap>保姆/钟点工</td>
       <td align="center" nowrap>未成交</td>
-      <td align="center" nowrap><a href="ddgl_ck.jsp">查看</a> <a href="ddgl_xg.jsp">修改</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
     </tr>
     <tr align="center" class="td1"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">2 </td>
@@ -87,7 +87,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>已成交</td>
-      <td align="center" nowrap><a href="ddgl_ck.jsp">查看</a> <a href="ddgl_xg.jsp">修改</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
     </tr>
     <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">3 </td>
@@ -98,7 +98,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.jsp">查看</a> <a href="ddgl_xg.jsp">修改</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
     </tr>
     <tr align="center" class="td1"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">4 </td>
@@ -109,7 +109,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.jsp">查看</a> <a href="ddgl_xg.jsp">修改</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
     </tr>
     <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
       <td nowrap align="center" width="4%">5 </td>
@@ -120,7 +120,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
       <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.jsp">查看</a> <a href="ddgl_xg.jsp">修改</a></td>
+      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
     </tr>
   </table>
 <table width="96%" height="10"  border="0" align="center" cellpadding="0" cellspacing="0">
