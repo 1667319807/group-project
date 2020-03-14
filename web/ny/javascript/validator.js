@@ -755,14 +755,14 @@ function checkTextBoxInput(){
 *设置文本框为日期输入
 ***********************/
 function selectDateNoTime() {
-	var str=window.showModalDialog(context+"/tdp/js/getdateNoTime.html",null,"font-size:10px;dialogWidth:180px;dialogHeight:180px;scrollbars=no;status=no");
+	var str=window.showModalDialog(context+"/tdp/js/getdateNoTime.jsp",null,"font-size:10px;dialogWidth:180px;dialogHeight:180px;scrollbars=no;status=no");
 	if (str == null || str == "" || str == "undefined")
 		return "";
 	else
 		return str;
 }
 function selectDate() {
-	var str=window.showModalDialog(context+"/tdp/js/getdate.html",null,	"font-size:10px;dialogWidth:180px;dialogHeight:180px;scrollbars=no;status=no");
+	var str=window.showModalDialog(context+"/tdp/js/getdate.jsp",null,	"font-size:10px;dialogWidth:180px;dialogHeight:180px;scrollbars=no;status=no");
 	if (str == null || str == "" || str == "undefined")
 		return "";
 	else

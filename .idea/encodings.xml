@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/web/ny/cwgl/bbcx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/cwgl/sfgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/cwgl/sfgl_ck.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/javascript/validator.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/grxx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/grxx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/grxx_ck.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/grxx_ss.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/grxx_ss.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/grxx_xg.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/grxx_xz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/gsgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/gsgl_xz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/rlzy/menu_rlzy.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/basedate_add.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/basedate_list.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/ck.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/czgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/czgl_xz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/fpqx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/gsgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/gsgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/gxmm.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/jsgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/jsxz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xfcx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xfcx_xz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xg.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xgjsxz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xxsjzd.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xzry.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xzsjzd.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/xzxgry.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/yhgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/xtgl/yhgl_xz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ye.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/ddgl.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/ddgl_ck.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/ddgl_xg.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/grxx_cx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/gzxx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/gzxx_ck.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/gzxx_xg.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/gzxx_xz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/lsda.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/message_add.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/message_list.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/mrtz.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/mrtz_ck.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/ywgl/ygcx.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/ny/zm.jsp" charset="GBK" />
+  </component>
+</project>
