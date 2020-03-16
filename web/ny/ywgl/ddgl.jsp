@@ -67,6 +67,7 @@ function doDBClick(url,operator,type) {
       <td width="8%" align="center" nowrap id=".submit_date" ><strong>状态</strong></td>
       <td width="9%" align="center" nowrap id=".submit_date" ><strong>操作</strong></td>
     </tr>
+
     <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" onDblClick="doDBClick('bl.htm',true,'2');">
       <td nowrap align="center" width="4%">1 </td>
       <td align="center" nowrap>张三</td>
@@ -78,50 +79,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>未成交</td>
       <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
     </tr>
-    <tr align="center" class="td1"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
-      <td nowrap align="center" width="4%">2 </td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td height="14" align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="left" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>已成交</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
-    </tr>
-    <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
-      <td nowrap align="center" width="4%">3 </td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td height="14" align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="left" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
-    </tr>
-    <tr align="center" class="td1"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
-      <td nowrap align="center" width="4%">4 </td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td height="14" align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="left" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
-    </tr>
-    <tr align="center" class="td2"  onmouseover="javascript:changeBgColorOnMouseOver(this);" onMouseOut="javascript:changeBgColorOnMouseOut(this);" >
-      <td nowrap align="center" width="4%">5 </td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td height="14" align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="left" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap>&nbsp;</td>
-      <td align="center" nowrap><a href="ddgl_ck.htm">查看</a> <a href="ddgl_xg.htm">修改</a></td>
-    </tr>
+
   </table>
 <table width="96%" height="10"  border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>

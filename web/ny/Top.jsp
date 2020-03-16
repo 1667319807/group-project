@@ -26,15 +26,9 @@
               <td width="297" background="image/tp_bg.jpg"><table width="96%" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center"><img src="image/mine_work.gif" width="16" height="16"></td>
-<<<<<<< HEAD:web/ny/Top.jsp
                   <td align="center"><a href="zm.jsp" target="_blank">桌面</a></td>
                   <td align="center"><img src="image/edi.gif" width="16" height="16"></td>
                   <td align="center"><a href="ye.jsp" target="_blank">余额查询</a></td>
-=======
-                  <td align="center"><a href="zm.html" target="_blank">桌面</a></td>
-                  <td align="center"><img src="image/edi.gif" width="16" height="16"></td>
-                  <td align="center"><a href="ye.html" target="_blank">余额查询</a></td>
->>>>>>> 25c831e680fcf36409dc8470194d3d8a808bdc83:web/ny/Top.htm
                   <td align="center"><img src="image/help.gif" width="16" height="16"></td>
                   <td align="center"><a href="#">修改密码</a></td>
                   <td align="center"><img src="image/del.gif" width="16" height="16"></td>

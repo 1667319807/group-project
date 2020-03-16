@@ -87,26 +87,5 @@ public class Util {
     }*/
 
     public static void close() {
-/*        try {
-            if(res != null){
-                res.close();
-            }
-            if(pre != null){
-                pre.close();
-            }
-            if(con != null){
-                con.close();
-                con = null;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }*/
-        /*for (int i = 0; i < auto.length; i++) {
-            try {
-                auto[i].close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }*/
     }
 }

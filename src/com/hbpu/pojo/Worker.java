@@ -1,5 +1,6 @@
 package com.hbpu.pojo;
 
+import org.omg.CORBA.INITIALIZE;
 import org.omg.CORBA.TIMEOUT;
 
 import java.sql.Timestamp;
@@ -9,19 +10,19 @@ import java.sql.Timestamp;
  * @time 2020/3/14 15:19
  */
 public class Worker {
-    private int worker_id;
-    private int company_id;
-    private String worker_sex;
+    private Integer worker_id;
+    private Integer company_id;
+    private String worker_name;
+    private Character worker_sex;
     private String worker_idcard;
     private Timestamp birthday;
-    private int worker_age;
-    private int worker_high;
+    private Integer [] worker_age;
+    private Integer worker_high;
     private String worker_shouji;
     private String worker_phone;
     private String worker_gongzhong;
     private Timestamp worker_worktime;
     private String worker_quedian;
-    private String worker_youdian;
     private String worker_photo;
     private String worker_hujiaddr;
     private String worker_xianaddr;
@@ -29,7 +30,7 @@ public class Worker {
     private String worker_baoxiannumber;
     private String worker_language;
     private String worker_state;
-    private char worker_marriagestate;
+    private String worker_marriagestate;
     private String worker_licensestate;
     private String worker_healthcond;
     private Timestamp worker_healthtime;
@@ -40,29 +41,75 @@ public class Worker {
     private String worker_zhusu;
     private String worker_canyin;
     private Timestamp worker_recordtime;
-    private int worker_company;
+    private Integer worker_company;
 
-    public int getWorker_id() {
+    public Worker() {
+    }
+
+    public Worker(Integer worker_id, Integer company_id, String worker_name, Character worker_sex, String worker_idcard, Timestamp birthday, Integer[] worker_age, Integer worker_high, String worker_shouji, String worker_phone, String worker_gongzhong, Timestamp worker_worktime, String worker_quedian, String worker_photo, String worker_hujiaddr, String worker_xianaddr, String worker_banknumber, String worker_baoxiannumber, String worker_language, String worker_state, String worker_marriagestate, String worker_licensestate, String worker_healthcond, Timestamp worker_healthtime, String worker_personskill, String worker_introduce, String worker_salaryrequire, String worker_timerequire, String worker_zhusu, String worker_canyin, Timestamp worker_recordtime, Integer worker_company) {
+        this.worker_id = worker_id;
+        this.company_id = company_id;
+        this.worker_name = worker_name;
+        this.worker_sex = worker_sex;
+        this.worker_idcard = worker_idcard;
+        this.birthday = birthday;
+        this.worker_age = worker_age;
+        this.worker_high = worker_high;
+        this.worker_shouji = worker_shouji;
+        this.worker_phone = worker_phone;
+        this.worker_gongzhong = worker_gongzhong;
+        this.worker_worktime = worker_worktime;
+        this.worker_quedian = worker_quedian;
+        this.worker_photo = worker_photo;
+        this.worker_hujiaddr = worker_hujiaddr;
+        this.worker_xianaddr = worker_xianaddr;
+        this.worker_banknumber = worker_banknumber;
+        this.worker_baoxiannumber = worker_baoxiannumber;
+        this.worker_language = worker_language;
+        this.worker_state = worker_state;
+        this.worker_marriagestate = worker_marriagestate;
+        this.worker_licensestate = worker_licensestate;
+        this.worker_healthcond = worker_healthcond;
+        this.worker_healthtime = worker_healthtime;
+        this.worker_personskill = worker_personskill;
+        this.worker_introduce = worker_introduce;
+        this.worker_salaryrequire = worker_salaryrequire;
+        this.worker_timerequire = worker_timerequire;
+        this.worker_zhusu = worker_zhusu;
+        this.worker_canyin = worker_canyin;
+        this.worker_recordtime = worker_recordtime;
+        this.worker_company = worker_company;
+    }
+
+    public Integer getWorker_id() {
         return worker_id;
     }
 
-    public void setWorker_id(int worker_id) {
+    public void setWorker_id(Integer worker_id) {
         this.worker_id = worker_id;
     }
 
-    public int getCompany_id() {
+    public Integer getCompany_id() {
         return company_id;
     }
 
-    public void setCompany_id(int company_id) {
+    public void setCompany_id(Integer company_id) {
         this.company_id = company_id;
     }
 
-    public String getWorker_sex() {
+    public String getWorker_name() {
+        return worker_name;
+    }
+
+    public void setWorker_name(String worker_name) {
+        this.worker_name = worker_name;
+    }
+
+    public Character getWorker_sex() {
         return worker_sex;
     }
 
-    public void setWorker_sex(String worker_sex) {
+    public void setWorker_sex(Character worker_sex) {
         this.worker_sex = worker_sex;
     }
 
@@ -82,19 +129,19 @@ public class Worker {
         this.birthday = birthday;
     }
 
-    public int getWorker_age() {
+    public Integer[] getWorker_age() {
         return worker_age;
     }
 
-    public void setWorker_age(int worker_age) {
+    public void setWorker_age(Integer[] worker_age) {
         this.worker_age = worker_age;
     }
 
-    public int getWorker_high() {
+    public Integer getWorker_high() {
         return worker_high;
     }
 
-    public void setWorker_high(int worker_high) {
+    public void setWorker_high(Integer worker_high) {
         this.worker_high = worker_high;
     }
 
@@ -138,13 +185,6 @@ public class Worker {
         this.worker_quedian = worker_quedian;
     }
 
-    public String getWorker_youdian() {
-        return worker_youdian;
-    }
-
-    public void setWorker_youdian(String worker_youdian) {
-        this.worker_youdian = worker_youdian;
-    }
 
     public String getWorker_photo() {
         return worker_photo;
@@ -202,11 +242,11 @@ public class Worker {
         this.worker_state = worker_state;
     }
 
-    public char getWorker_marriagestate() {
+    public String getWorker_marriagestate() {
         return worker_marriagestate;
     }
 
-    public void setWorker_marriagestate(char worker_marriagestate) {
+    public void setWorker_marriagestate(String worker_marriagestate) {
         this.worker_marriagestate = worker_marriagestate;
     }
 
@@ -290,49 +330,12 @@ public class Worker {
         this.worker_recordtime = worker_recordtime;
     }
 
-    public int getWorker_company() {
+    public Integer getWorker_company() {
         return worker_company;
     }
 
-    public void setWorker_company(int worker_company) {
+    public void setWorker_company(Integer worker_company) {
         this.worker_company = worker_company;
     }
 
-    public Worker() {
-    }
-
-    public Worker(int worker_id, int company_id, String worker_sex, String worker_idcard, Timestamp birthday, int worker_age, int worker_high, String worker_shouji, String worker_phone, String worker_gongzhong, Timestamp worker_worktime, String worker_quedian, String worker_youdian, String worker_photo, String worker_hujiaddr, String worker_xianaddr, String worker_banknumber, String worker_baoxiannumber, String worker_language, String worker_state, char worker_marriagestate, String worker_licensestate, String worker_healthcond, Timestamp worker_healthtime, String worker_personskill, String worker_introduce, String worker_salaryrequire, String worker_timerequire, String worker_zhusu, String worker_canyin, Timestamp worker_recordtime, int worker_company) {
-        this.worker_id = worker_id;
-        this.company_id = company_id;
-        this.worker_sex = worker_sex;
-        this.worker_idcard = worker_idcard;
-        this.birthday = birthday;
-        this.worker_age = worker_age;
-        this.worker_high = worker_high;
-        this.worker_shouji = worker_shouji;
-        this.worker_phone = worker_phone;
-        this.worker_gongzhong = worker_gongzhong;
-        this.worker_worktime = worker_worktime;
-        this.worker_quedian = worker_quedian;
-        this.worker_youdian = worker_youdian;
-        this.worker_photo = worker_photo;
-        this.worker_hujiaddr = worker_hujiaddr;
-        this.worker_xianaddr = worker_xianaddr;
-        this.worker_banknumber = worker_banknumber;
-        this.worker_baoxiannumber = worker_baoxiannumber;
-        this.worker_language = worker_language;
-        this.worker_state = worker_state;
-        this.worker_marriagestate = worker_marriagestate;
-        this.worker_licensestate = worker_licensestate;
-        this.worker_healthcond = worker_healthcond;
-        this.worker_healthtime = worker_healthtime;
-        this.worker_personskill = worker_personskill;
-        this.worker_introduce = worker_introduce;
-        this.worker_salaryrequire = worker_salaryrequire;
-        this.worker_timerequire = worker_timerequire;
-        this.worker_zhusu = worker_zhusu;
-        this.worker_canyin = worker_canyin;
-        this.worker_recordtime = worker_recordtime;
-        this.worker_company = worker_company;
-    }
 }
