@@ -1,6 +1,7 @@
 package com.hbpu.service.impl;
 
 import com.hbpu.dao.WorkerDao;
+import com.hbpu.pojo.Trade;
 import com.hbpu.pojo.Worker;
 import com.hbpu.service.WorkerService;
 
@@ -15,5 +16,10 @@ public class WorkerServiceImpl  implements WorkerService {
     @Override
     public List<Worker> queryWithCond(Worker worker) {
         return workerDao.selectWithCond(worker);
+    }
+
+    @Override
+    public List<Trade> getTradesWithCond(Object... para) {
+        return workerDao.manageWorkerWithCond(para);
     }
 }

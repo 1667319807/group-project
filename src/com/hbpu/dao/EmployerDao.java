@@ -54,12 +54,13 @@ public class EmployerDao {
                 "trade_state,trade_recordtime from employer e inner join trade t WHERE e.employer_id=t.employer_id";
         StringBuffer cond = new StringBuffer();
         if (para[0] != null) {
+            //para[0]="";
             cond.append(" and employer_name  like '%" + para[0] + "%'");
         } else {
             cond.append(" and employer_name  like '%%'");
         }
         if (para[1] != null) {
-            cond.append(" and employer_sex ='" + para[1]+"'");
+            cond.append(" and employer_sex ='" + para[1] + "'");
         } else {
             cond.append(" and employer_sex =''");
         }
@@ -69,12 +70,12 @@ public class EmployerDao {
             //cond.append(" and employer_phone='' "+"''");
         }
         if (para[3] != null) {
-            cond.append(" and t.trade_state= '" + para[3]+"'");
+            cond.append(" and t.trade_state= '" + para[3] + "'");
         } else {
             cond.append(" and t.trade_state='' ");
         }
         if (para[4] != null) {
-            cond.append(" and trade_hiretype = '" + para[4]+"'");
+            cond.append(" and trade_hiretype = '" + para[4] + "'");
         } else {
             cond.append(" and trade_hiretype =''");
         }
@@ -87,7 +88,7 @@ public class EmployerDao {
             con = Util.getConnection();
             pst = con.prepareStatement(sql);
             res = dao.exeQuery(con, pst);
-            if (res.next()) {
+            while (res != null && res.next()) {
                 Employer employer = new Employer();
                 employer.setEmployer_id(Integer.valueOf(res.getString(1)));
                 employer.setEmployer_sex(res.getString(2));
@@ -105,6 +106,7 @@ public class EmployerDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
+            dao.close(res, pst, con);
         }
         return list;
     }

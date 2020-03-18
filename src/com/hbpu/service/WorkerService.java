@@ -1,5 +1,6 @@
 package com.hbpu.service;
 
+import com.hbpu.pojo.Trade;
 import com.hbpu.pojo.Worker;
 
 import java.util.List;
@@ -10,4 +11,5 @@ import java.util.List;
  */
 public interface WorkerService {
     List<Worker> queryWithCond(Worker worker);
+    List<Trade> getTradesWithCond(Object...para);
 }

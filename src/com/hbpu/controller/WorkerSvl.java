@@ -1,5 +1,6 @@
 package com.hbpu.controller;
 
+import com.hbpu.pojo.Trade;
 import com.hbpu.pojo.Worker;
 import com.hbpu.service.WorkerService;
 import com.hbpu.service.impl.WorkerServiceImpl;
@@ -31,7 +32,31 @@ public class WorkerSvl extends HttpServlet {
         String reqType = request.getParameter("reqType");
         if(reqType.equals("queryWorkerWithCond")){
             queryWorkerWithCond(request,response);
+        }if(reqType.equals("getAllTrades")){
+            getAllTrades(request,response);
+        }if(reqType.equals("getTradesWithCond")){
+            getTradesWithCond(request,response);
         }
+    }
+
+    private void getTradesWithCond(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String employerName = request.getParameter("employerName");
+        String recordTime1 = request.getParameter("recordTime1");
+        String recordTime2 = request.getParameter("recordTime2");
+        String workerName = request.getParameter("workerName");
+        String state = request.getParameter("state");
+
+        List<Trade> tradesList = service.getTradesWithCond(employerName, recordTime1, recordTime2, workerName, state);
+        System.out.println(tradesList.size());
+        request.setAttribute("tradesList",tradesList);
+        request.getRequestDispatcher("/ny/ywgl/ddgl.jsp").forward(request,response);
+    }
+
+    private void getAllTrades(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Trade> tradesList = service.getTradesWithCond();
+        //System.out.println(tradesList.size());
+        request.setAttribute("tradesList",tradesList);
+        request.getRequestDispatcher("/ny/ywgl/ddgl.jsp").forward(request,response);
     }
 
     private void queryWorkerWithCond(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

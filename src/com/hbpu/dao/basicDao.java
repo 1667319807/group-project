@@ -36,7 +36,7 @@ public class basicDao {
         return m;
     }
 
-    public void close(AutoCloseable... auto) {
+    public  void close(AutoCloseable... auto) {
         for (AutoCloseable o : auto) {
             try {
                 o.close();

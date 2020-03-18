@@ -117,7 +117,7 @@
         <td width="14" class="Menu_OutTd" id="menutd1">&nbsp;</td>
         <td width="70" nowrap id="menubar_1" class="Menu_OutTd">|<a href="grxx_cx.jsp" target="main">高级搜索</a></td>
         <td width="70" nowrap id="menubar_2" class="Menu_OutTd">|<a href="grxx_cx.jsp" target="main">用工检索</a></td>
-        <td width="70" nowrap id="menubar_3" class="Menu_OutTd">|<a href="ddgl.jsp" target="main"> 用工管理</a></td>
+        <td width="70" nowrap id="menubar_3" class="Menu_OutTd">|<a href="/ny/workersvl?reqType=getAllTrades" target="main"> 用工管理</a></td>
         <td width="70" nowrap id="menubar_4" class="Menu_OutTd">|<a href="/ny/employerSvl?reqType=getAllEmployers" target="main"> 客户管理</a></td>
 
         <td width="70" nowrap class="Menu_OutTd" id="menubar_5">| <a href="mrtz.jsp" target="main">每日通知</a></td>

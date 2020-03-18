@@ -43,8 +43,8 @@ function doDBClick(url,operator,type) {
         <input type="text" name="phone" maxlength="20" size="12" value="" class="input">
         状态：
         <select name="state" id="select" class="input">
-          <option selected value="已雇佣">已雇佣</option>
-          <option value="未雇佣">未雇佣</option>
+          <option selected value="已雇用">已雇用</option>
+          <option value="未雇用">未雇用</option>
         </select>
         雇用职位：
         <select name="type" id="select2" class="input">

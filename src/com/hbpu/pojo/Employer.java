@@ -22,6 +22,7 @@ public class Employer {
     private Timestamp employer_hetongqixian;
     private String employer_shouji;
     private String employer_phone;
+    private String employer_zhuzhai;
     private String employer_hukouaddr;
     private String employer_serveraddr;
     private String employer_jiatingaddr;
@@ -41,7 +42,7 @@ public class Employer {
     public Employer() {
     }
 
-    public Employer(Integer employer_id, Company company, String employer_name, String employer_sex, Integer employer_age, String employer_minzu, String employer_jiguan, String employer_education, String employer_idcard, String employer_zhiye, String employer_workplace, String employer_hetonghao, Timestamp employer_hetongqixian, String employer_shouji, String employer_phone, String employer_hukouaddr, String employer_serveraddr, String employer_jiatingaddr, String employer_jiatingrenshu, String employer_hirerequire, String employer_jiatingserver, String employer_jiatingfangwumianji, String employer_jiatingyinshi, String employer_jiatingqita, Integer employer_jingbanren, Timestamp employer_recordtime, Float employer_highsalary, Float employer_lowsalary, Timestamp employer_birthdate, Trade trade) {
+    public Employer(Integer employer_id, Company company, String employer_name, String employer_sex, Integer employer_age, String employer_minzu, String employer_jiguan, String employer_education, String employer_idcard, String employer_zhiye, String employer_workplace, String employer_hetonghao, Timestamp employer_hetongqixian, String employer_shouji, String employer_phone, String employer_zhuzhai, String employer_hukouaddr, String employer_serveraddr, String employer_jiatingaddr, String employer_jiatingrenshu, String employer_hirerequire, String employer_jiatingserver, String employer_jiatingfangwumianji, String employer_jiatingyinshi, String employer_jiatingqita, Integer employer_jingbanren, Timestamp employer_recordtime, Float employer_highsalary, Float employer_lowsalary, Timestamp employer_birthdate, Trade trade) {
         this.employer_id = employer_id;
         this.company = company;
         this.employer_name = employer_name;
@@ -57,6 +58,7 @@ public class Employer {
         this.employer_hetongqixian = employer_hetongqixian;
         this.employer_shouji = employer_shouji;
         this.employer_phone = employer_phone;
+        this.employer_zhuzhai = employer_zhuzhai;
         this.employer_hukouaddr = employer_hukouaddr;
         this.employer_serveraddr = employer_serveraddr;
         this.employer_jiatingaddr = employer_jiatingaddr;
@@ -72,6 +74,14 @@ public class Employer {
         this.employer_lowsalary = employer_lowsalary;
         this.employer_birthdate = employer_birthdate;
         this.trade = trade;
+    }
+
+    public String getEmployer_zhuzhai() {
+        return employer_zhuzhai;
+    }
+
+    public void setEmployer_zhuzhai(String employer_zhuzhai) {
+        this.employer_zhuzhai = employer_zhuzhai;
     }
 
     public Trade getTrade() {
