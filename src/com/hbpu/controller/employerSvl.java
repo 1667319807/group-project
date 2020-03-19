@@ -30,7 +30,16 @@ public class employerSvl extends HttpServlet {
         }
         if (reqType.equals("queryEmployersWithCond")) {
             queryEmployersWithCond(request, response);
+        }if(reqType.equals("employerDetail")){
+            employerDetail(request,response);
         }
+    }
+
+    private void employerDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String employer_id = request.getParameter("employer_id");
+        Employer employerDetail = service.getEmployerDetail(Integer.valueOf(employer_id));
+        request.setAttribute("employer",employerDetail);
+        request.getRequestDispatcher("/ny/ywgl/gzxx_ck.jsp").forward(request,response);
     }
 
     private void queryEmployersWithCond(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

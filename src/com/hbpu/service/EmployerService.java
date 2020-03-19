@@ -11,4 +11,5 @@ import java.util.List;
 public interface EmployerService {
     List<Employer> getAllEmployers();
     List<Employer> getEmployersWithCond(Object...para);
+    Employer getEmployerDetail(Integer employer_id);
 }

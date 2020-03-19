@@ -23,6 +23,13 @@ public class TradeServlet extends HttpServlet {
         if(reqType.equals("checkOrder")){
             checkOrder(request,response);
         }
+        if(reqType.equals("modOrder")){
+            modOrder(request,response);
+        }
+    }
+
+    private void modOrder(HttpServletRequest request, HttpServletResponse response) {
+
     }
 
     private void checkOrder(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

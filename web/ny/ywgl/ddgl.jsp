@@ -92,7 +92,7 @@
         <td align="center" nowrap>${trade.trade_state}</td>
         <td align="center" nowrap>
             <a href="${pageContext.request.contextPath}/ny/tradeSvl?trade_id=${trade.trade_id}&reqType=checkOrder">查看</a>
-            <a href="ddgl_xg.htm">修改</a></td>
+            <a href="${pageContext.request.contextPath}/ny/tradeSvl?trade_id=${trade.trade_id}&reqType=modOrder">修改</a></td>
     </tr>
 </c:forEach>
 </table>

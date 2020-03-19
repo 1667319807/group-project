@@ -84,7 +84,7 @@ function doDBClick(url,operator,type) {
       <td align="center" nowrap>${list.employer_lowsalary}-${list.employer_highsalary}</td>
       <td align="center" nowrap>${list.trade.trade_state}</td>
       <td align="center" nowrap>${list.trade.trade_recordtime}&nbsp; </td>
-      <td align="center" nowrap><a href="gzxx_ck.htm">查看</a> <a href="gzxx_xg.htm">修改</a> <a href="lsda.htm">历史档案</a></td>
+      <td align="center" nowrap><a href="/ny/employerSvl?employer_id=${list.employer_id}&reqType=employerDetail">查看</a> <a href="gzxx_xg.htm">修改</a> <a href="lsda.htm">历史档案</a></td>
     </tr>
     </c:forEach>
   </table>

@@ -17,7 +17,7 @@ public class TradeDao {
     private basicDao dao = new basicDao();
 
     public Trade selectTrade(Integer trade_id) {
-        Trade trade=null;
+        Trade trade = null;
         String sql = "SELECT employer_name,employer_sex,employer_age,employer_minzu,employer_jiguan,employer_education,\n" +
                 "employer_idcard,employer_hukouaddr,employer_shouji,employer_zhuzhai,employer_zhiye,employer_workplace,employer_lowsalary,employer_highsalary,trade_jieshaofei,employer_hirerequire,\n" +
                 "employer_serveraddr,employer_jiatingaddr,employer_jiatingrenshu,employer_jiatingserver,employer_jiatingfangwumianji,employer_jiatingyinshi,employer_jiatingqita,employer_jingbanren,\n" +
@@ -28,7 +28,7 @@ public class TradeDao {
         try {
             con = Util.getConnection();
             pst = con.prepareStatement(sql);
-            res = dao.exeQuery(con, pst,trade_id);
+            res = dao.exeQuery(con, pst, trade_id);
             while (res != null && res.next()) {
                 Employer employer = new Employer();
                 employer.setEmployer_name(res.getString(1));
@@ -68,4 +68,11 @@ public class TradeDao {
         return trade;
     }
 
+    public Trade updateOrder(Integer trade_id) {
+        Trade trade=new Trade();
+        String sql="";
+        return trade;
+    }
+
+    ;
 }

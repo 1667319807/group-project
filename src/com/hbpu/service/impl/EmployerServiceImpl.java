@@ -22,4 +22,9 @@ public class EmployerServiceImpl implements EmployerService {
     public List<Employer> getEmployersWithCond(Object... para) {
         return employerDao.selectEmployersWithCond(para);
     }
+
+    @Override
+    public Employer getEmployerDetail(Integer employer_id) {
+        return employerDao.selectEmployerDetail(employer_id);
+    }
 }

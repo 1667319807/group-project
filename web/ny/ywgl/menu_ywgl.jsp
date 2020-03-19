@@ -120,8 +120,8 @@
         <td width="70" nowrap id="menubar_3" class="Menu_OutTd">|<a href="/ny/workersvl?reqType=getAllTrades" target="main"> 用工管理</a></td>
         <td width="70" nowrap id="menubar_4" class="Menu_OutTd">|<a href="/ny/employerSvl?reqType=getAllEmployers" target="main"> 客户管理</a></td>
 
-        <td width="70" nowrap class="Menu_OutTd" id="menubar_5">| <a href="mrtz.jsp" target="main">每日通知</a></td>
-        <td width="70" nowrap class="Menu_OutTd" id="menubar_16">|<a target="main">短消息</a></td>
+        <td width="70" nowrap class="Menu_OutTd" id="menubar_5">| <a href="/ny/noticesvl?reqType=queryAllNotices" target="main">每日通知</a></td>
+        <td width="70" nowrap class="Menu_OutTd" id="menubar_16">|<a href="/ny/messagesvl?reqType=getAllMessages" target="main">短消息</a></td>
         <td width="676" nowrap align="right" class="Menu_OutTd">&nbsp;</td>
     </tr>
 </table>
