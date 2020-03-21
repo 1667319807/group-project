@@ -1,6 +1,7 @@
 package com.hbpu.dao;
 
 import com.hbpu.pojo.Employer;
+import com.hbpu.pojo.PageBean;
 import com.hbpu.pojo.Trade;
 import com.hbpu.util.Util;
 
@@ -16,18 +17,18 @@ import java.util.Map;
 public class EmployerDao {
     private basicDao dao = new basicDao();
 
-    public List<Employer> selectAllEmployers() {
+    public List<Employer> selectAllEmployers(PageBean<Employer> page) {
         List<Employer> list = new ArrayList<>();
         String sql = "SELECT e.employer_id,employer_sex,employer_name,employer_age,trade_hiretype,employer_lowsalary,employer_highsalary,\n" +
-                "trade_state,trade_recordtime from employer e inner join trade t WHERE e.employer_id=t.employer_id";
+                "trade_state,trade_recordtime from employer e inner join trade t WHERE e.employer_id=t.employer_id limit ?,?";
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet res = null;
         try {
             con = Util.getConnection();
             pst = con.prepareStatement(sql);
-            res = dao.exeQuery(con, pst);
-            if (res.next()) {
+            res = dao.exeQuery(con, pst,(page.getPageNum()-1)*page.getPageSize(),page.getPageSize());
+            while (res!=null&&res.next()) {
                 Employer employer = new Employer();
                 employer.setEmployer_id(Integer.valueOf(res.getString(1)));
                 employer.setEmployer_sex(res.getString(2));
@@ -111,9 +112,10 @@ public class EmployerDao {
         }
         return list;
     }
-    public Employer selectEmployerDetail(Integer employer_id){
-        Employer employer=null;
-        Trade trade=null;
+
+    public Employer selectEmployerDetail(Integer employer_id) {
+        Employer employer = null;
+        Trade trade = null;
         String sql = "SELECT employer_name,employer_sex,employer_age,employer_minzu,employer_jiguan,employer_education,\n" +
                 "employer_idcard,employer_hukouaddr,employer_shouji,employer_zhuzhai,employer_zhiye,employer_workplace,employer_hetonghao,\n" +
                 "employer_serveraddr,employer_jiatingaddr,employer_jiatingrenshu,employer_jiatingserver,employer_jiatingfangwumianji,employer_jiatingyinshi,employer_jiatingqita,employer_jingbanren,\n" +
@@ -124,7 +126,7 @@ public class EmployerDao {
         try {
             con = Util.getConnection();
             pst = con.prepareStatement(sql);
-            res = dao.exeQuery(con, pst,employer_id);
+            res = dao.exeQuery(con, pst, employer_id);
             while (res != null && res.next()) {
                 employer = new Employer();
                 employer.setEmployer_name(res.getString(1));
@@ -159,5 +161,60 @@ public class EmployerDao {
             dao.close(res, pst, con);
         }
         return employer;
+    }
+
+    public int addEmployer(Employer employer) {
+        int i = 0;
+        String sql = "insert into employer(employer_name,employer_sex,employer_age,employer_minzu,employer_jiguan,employer_education," +
+                " employer_idcard,employer_workplace,employer_zhiye,employer_hetonghao,employer_hetongqixian,employer_shouji,employer_zhuzhai,employer_hukouaddr," +
+                " employer_serveraddr,employer_jiatingaddr,employer_jiatingrenshu,employer_jiatingserver,employer_jiatingfangwumianji,employer_jiatingyinshi,employer_jiatingqita,employer_highsalary,employer_lowsalary," +
+                " employer_hirerequire,employer_jingbanren,employer_recordtime )" +
+                "  values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
+        Connection con = null;
+        PreparedStatement pst = null;
+        try {
+            con = Util.getConnection();
+            con.setAutoCommit(false);
+            pst = con.prepareStatement(sql);
+            i = dao.exeUpdate(con, pst, employer.getEmployer_name(), employer.getEmployer_sex(), employer.getEmployer_age(), employer.getEmployer_minzu()
+                    , employer.getEmployer_jiguan(), employer.getEmployer_education(), employer.getEmployer_idcard(),employer.getEmployer_workplace(), employer.getEmployer_zhiye(),
+                    employer.getEmployer_hetonghao(),employer.getEmployer_hetongqixian(),employer.getEmployer_shouji(),employer.getEmployer_zhuzhai(), employer.getEmployer_hukouaddr()
+                    ,   employer.getEmployer_serveraddr()
+                    , employer.getEmployer_jiatingaddr(), employer.getEmployer_jiatingrenshu(), employer.getEmployer_jiatingserver(), employer.getEmployer_jiatingfangwumianji(), employer.getEmployer_jiatingyinshi()
+                    , employer.getEmployer_jiatingqita(),employer.getEmployer_highsalary(),employer.getEmployer_lowsalary(),employer.getEmployer_hirerequire(), employer.getEmployer_jingbanren(), employer.getEmployer_recordtime());
+            System.out.println("i = " + i);
+            System.out.println(sql);
+            con.commit();
+        } catch (SQLException e) {
+            try {
+                con.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+            e.printStackTrace();
+        }finally {
+            dao.close(pst,con);
+        }
+        return i;
+    }
+    public int queryCount() {
+        int i = 0;
+        String sql = "select count(*) from employer";
+        Connection con = null;
+        PreparedStatement pst = null;
+        ResultSet res = null;
+        try {
+            con = Util.getConnection();
+            pst = con.prepareStatement(sql);
+            res = dao.exeQuery(con, pst);
+            while (res != null && res.next()) {
+                i = Integer.parseInt(res.getString(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            dao.close(res, pst, con);
+        }
+        return i;
     }
 }

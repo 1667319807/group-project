@@ -1,5 +1,7 @@
 package com.hbpu.controller;
 
+import com.hbpu.pojo.Employer;
+import com.hbpu.pojo.PageBean;
 import com.hbpu.pojo.Trade;
 import com.hbpu.pojo.Worker;
 import com.hbpu.service.WorkerService;
@@ -25,7 +27,8 @@ import java.util.List;
  */
 @WebServlet(value = "/ny/workersvl")
 public class WorkerSvl extends HttpServlet {
-    WorkerService service=new WorkerServiceImpl();
+    private WorkerService service=new WorkerServiceImpl();
+    private PageBean<Worker> page=new PageBean<>();
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -53,8 +56,17 @@ public class WorkerSvl extends HttpServlet {
     }
 
     private void getAllTrades(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String pageStr = request.getParameter("pageNum");
+        Integer pageNum=1;
+        int totalCount = service.getTotalCount();
+        if(pageStr==null){
+            page.setPageNum(pageNum);
+        }else{
+            page.setPageNum(Integer.valueOf(pageStr));
+        }
+        page.setTotalCount(totalCount);
         List<Trade> tradesList = service.getTradesWithCond();
-        //System.out.println(tradesList.size());
+        request.setAttribute("page",page);
         request.setAttribute("tradesList",tradesList);
         request.getRequestDispatcher("/ny/ywgl/ddgl.jsp").forward(request,response);
     }

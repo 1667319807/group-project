@@ -22,4 +22,9 @@ public class WorkerServiceImpl  implements WorkerService {
     public List<Trade> getTradesWithCond(Object... para) {
         return workerDao.manageWorkerWithCond(para);
     }
+
+    @Override
+    public int getTotalCount() {
+        return workerDao.queryCount();
+    }
 }

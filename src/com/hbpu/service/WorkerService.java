@@ -12,4 +12,6 @@ import java.util.List;
 public interface WorkerService {
     List<Worker> queryWithCond(Worker worker);
     List<Trade> getTradesWithCond(Object...para);
+
+    int getTotalCount();
 }

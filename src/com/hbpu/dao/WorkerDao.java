@@ -185,4 +185,25 @@ public class WorkerDao {
         }
         return list;
     }
+
+    public int queryCount() {
+        int i = 0;
+        String sql = "select count(*) from trade";
+        Connection con = null;
+        PreparedStatement pst = null;
+        ResultSet res = null;
+        try {
+            con = Util.getConnection();
+            pst = con.prepareStatement(sql);
+            res = dao.exeQuery(con, pst);
+            while (res != null && res.next()) {
+                i = Integer.parseInt(res.getString(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            dao.close(res, pst, con);
+        }
+        return i;
+    }
 }
