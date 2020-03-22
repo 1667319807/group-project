@@ -1,7 +1,7 @@
 package com.hbpu.dao;
 
 import com.hbpu.pojo.Notice;
-import com.hbpu.pojo.PageBean;
+import com.hbpu.util.PageBean;
 import com.hbpu.util.Util;
 
 import java.sql.*;

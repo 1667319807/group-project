@@ -45,13 +45,14 @@ function doDBClick(url,operator,type) {
       <td align="right" nowrap class="MENU_line1 STYLE2">&nbsp;</td>
     </tr>
   </table>
-  
+<form action="/ny/rechargesvl?reqType=charge" method="post">
+  <input type="hidden" name="recharge_id" value="${param.recharge_id}">
   <table width="79%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#bdc7d3" class="text_lb">
     <tr bgcolor="#FFFFFF">
       <td width="15%" align="right" bgcolor="#FFFFFF"><strong>充值帐户：</strong></td>
-      <td width="20%">千福家政</td>
+      <td width="20%">${param.company_account}</td>
       <td width="25%" align="right"><strong>充值金额：</strong></td>
-      <td width="40%"><input name="textarea4" type="text" id="textarea4" value="" size="12" class="pi">
+      <td width="40%"><input name="balance" type="text" id="textarea4" value="" size="12" class="pi">
         <span class="text"><span class="STYLE3">*
       </span></span></td>
     </tr>
@@ -60,6 +61,7 @@ function doDBClick(url,operator,type) {
       <td colspan="3"><textarea name="textarea35" id="textarea35" cols="60" rows="5" ></textarea></td>
     </tr>
   </table>
+
 <br>
 <table width="96%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
@@ -70,5 +72,6 @@ function doDBClick(url,operator,type) {
 &nbsp;&nbsp; </span></td>
   </tr>
 </table>
+</form>
 </body>
 </html>

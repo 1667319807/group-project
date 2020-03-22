@@ -1,12 +1,10 @@
 package com.hbpu.controller;
 
-import com.hbpu.pojo.Employer;
-import com.hbpu.pojo.PageBean;
+import com.hbpu.util.PageBean;
 import com.hbpu.pojo.Trade;
 import com.hbpu.pojo.Worker;
 import com.hbpu.service.WorkerService;
 import com.hbpu.service.impl.WorkerServiceImpl;
-import org.omg.CORBA.INITIALIZE;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,10 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sound.midi.Soundbank;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -72,6 +68,7 @@ public class WorkerSvl extends HttpServlet {
     }
 
     private void queryWorkerWithCond(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String workername = request.getParameter("workername");
         Character sex =request.getParameter("sex").charAt(0);
         Integer select1 =Integer.valueOf(request.getParameter("select1")) ;
@@ -79,20 +76,48 @@ public class WorkerSvl extends HttpServlet {
         Integer age[]={select1,select2};
         String worktime = request.getParameter("worktime");
         Timestamp timestamp = Timestamp.valueOf(worktime);
-        String[] educations = request.getParameterValues("education");
+        String education = request.getParameter("education");
         String[] hobbies = request.getParameterValues("hobby");
         String[] languages = request.getParameterValues("language");
-        String[] states = request.getParameterValues("state");
+        String otherlanguage = request.getParameter("otherlanguage");
+        String strlang="";
+        if(languages!=null||otherlanguage!=""){
+            for(String h:languages){
+                strlang+=h.concat("','");
+            }
+        }
+        String states = request.getParameter("state");
         String marriage = request.getParameter("marriage");
         String[] licenses = request.getParameterValues("license");
+        String strli="";
+        if(licenses!=null){
+            for(String li:licenses){
+                strli+=li.concat("','");
+            }
+        }
+        //System.out.println(strli.substring(0,strli.length()-1));
         String[] personskills = request.getParameterValues("personskill");
-
+        String strper="";
+        if(personskills!=null){
+            for(String li:personskills){
+                strper+=li.concat("','");
+            }
+        }
         Worker worker=new Worker(null,null,workername,sex,null,null,age,null,null,null,null,
-                 timestamp,null,null,null,null,null,null,languages[0],states[0],marriage,licenses[0],
-                null,null,personskills[0],null,null,null,null,null,null,null);
+                 timestamp,null,null,null,null,null,null,strlang,states,marriage,strli,
+                null,null,strper,null,null,null,null,null,null,null);
         List<Worker> list = service.queryWithCond(worker);
-        request.setAttribute("worker",list);
-        request.getRequestDispatcher("").forward(request,response);
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Content-Type", "text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter writer = response.getWriter();
+        if(list.size()>0){
+            request.setAttribute("worker",list);
+            writer.print("<script>alert('找到"+list.size()+"条记录')</script>");
+        }else{
+            writer.print("<script>alert('没有找到记录')</script>");
+        }
+        //request.getRequestDispatcher("").forward(request,response);
     }
 
     @Override

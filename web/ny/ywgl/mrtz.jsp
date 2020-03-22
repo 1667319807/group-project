@@ -17,6 +17,14 @@
             }
         }
     </script>
+    <script >
+        function goPage() {
+            var page=document.getElementById("page").value;
+            console.log(page)
+            alert(page)
+            window.location.href="/ny/noticesvl?reqType=queryAllNotices&pageNum="+page;
+        }
+    </script>
 </head>
 
 <body>
@@ -80,9 +88,8 @@
                             <a href="/ny/noticesvl?reqType=queryAllNotices&pageNum=${page.pageNum-1}">上一页</a>
                             <a href="#">下一页</a>
                         </c:if>
-                        <a href="javascript:this.document.AwaitForm.submit()" oncontextmenu="return false" onClick="if(this.document.AwaitForm.pageSelect.value==''){ alert('页码必须输入');return false;}
- else {this.document.AwaitForm.paginationAction.value='gotoPage';}">前往</a>
-                        <input type=text size='4' onlytype='int' onfocus='checkTextBoxInput()' name='pageSelect'
+                        <button value="前往" onclick="goPage()">前往</button>
+                        <input type="text" id="page" size='4' onlytype='int' name='pageSelect'
                                value=''/>
                         页
                     </td>

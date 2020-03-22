@@ -1,14 +1,13 @@
 package com.hbpu.dao;
 
 import com.hbpu.pojo.Employer;
-import com.hbpu.pojo.PageBean;
+import com.hbpu.util.PageBean;
 import com.hbpu.pojo.Trade;
 import com.hbpu.util.Util;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author qiaolu

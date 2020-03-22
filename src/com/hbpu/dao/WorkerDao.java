@@ -21,12 +21,12 @@ public class WorkerDao {
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet res = null;
-        if (worker.getWorker_name().trim() != null) {
+        if (worker.getWorker_name().trim() != "") {
             cond.append(" where worker_name like '%" + worker.getWorker_name() + "%' ");
         } else {
             cond.append(" where worker_name like '%%'");
         }
-        if (worker.getWorker_sex().toString() != null) {
+        if (worker.getWorker_sex().toString() != "") {
             cond.append(" and worker_sex='" + worker.getWorker_sex() + "'");
         } else {
             cond.append(" and worker_sex=''");
@@ -42,28 +42,30 @@ public class WorkerDao {
         } else {
             cond.append(" and worker_worktime =''");
         }
-        if (worker.getWorker_language() != null) {
-            cond.append(" and worker_language='" + worker.getWorker_language() + "'");
+        if (worker.getWorker_language() != "") {
+            String worker_language = worker.getWorker_language();
+            //String[] split = worker_language.split(",");
+            cond.append(" and worker_language in('" + worker.getWorker_language().substring(0,worker_language.length()-2) + ")");
         } else {
             cond.append(" worker_language=''");
         }
-        if (worker.getWorker_state() != null) {
+        if (worker.getWorker_state() != "") {
             cond.append(" and worker_state='" + worker.getWorker_state() + "'");
         } else {
             cond.append(" and worker_state=''");
         }
-        if (worker.getWorker_marriagestate() != null) {
+        if (worker.getWorker_marriagestate() != "") {
             cond.append(" and worker_marriagestate ='" + worker.getWorker_marriagestate() + "'");
         } else {
             cond.append(" and worker_marriagestate =''");
         }
-        if (worker.getWorker_licensestate() != null) {
-            cond.append(" and worker_licensestate ='" + worker.getWorker_licensestate() + "'");
+        if (worker.getWorker_licensestate() != "") {
+            cond.append(" and worker_licensestate in ('" + worker.getWorker_licensestate().substring(0,worker.getWorker_licensestate().length()-2) + ")");
         } else {
             cond.append(" and worker_licensestate =''");
         }
-        if (worker.getWorker_personskill() != null) {
-            cond.append(" and worker_personskill='" + worker.getWorker_personskill() + "'");
+        if (worker.getWorker_personskill() != "") {
+            cond.append(" and worker_personskill in ('" + worker.getWorker_personskill().substring(0,worker.getWorker_personskill().length()-2) + ")");
         } else {
             cond.append(" and worker_personskill=''");
         }
@@ -73,7 +75,7 @@ public class WorkerDao {
             con = Util.getConnection();
             pst = con.prepareStatement(sql);
             res = dao.exeQuery(con, pst);
-            while (res.next()) {
+            while (res!=null&&res.next()) {
                 Worker w = new Worker();
                 w.setWorker_name(res.getString(3));
                 w.setWorker_sex(res.getString(4).charAt(0));

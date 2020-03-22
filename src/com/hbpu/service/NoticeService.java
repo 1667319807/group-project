@@ -1,7 +1,7 @@
 package com.hbpu.service;
 
 import com.hbpu.pojo.Notice;
-import com.hbpu.pojo.PageBean;
+import com.hbpu.util.PageBean;
 
 import java.util.List;
 

@@ -1,9 +1,7 @@
 package com.hbpu.controller;
 
 import com.hbpu.pojo.Employer;
-import com.hbpu.pojo.Notice;
-import com.hbpu.pojo.PageBean;
-import com.hbpu.pojo.Trade;
+import com.hbpu.util.PageBean;
 import com.hbpu.service.EmployerService;
 import com.hbpu.service.impl.EmployerServiceImpl;
 
@@ -15,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author qiaolu

@@ -1,4 +1,4 @@
-package com.hbpu.pojo;
+package com.hbpu.util;
 
 import java.util.List;
 

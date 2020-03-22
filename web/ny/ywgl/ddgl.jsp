@@ -6,15 +6,10 @@
 <head>
     <title>Untitled Document</title>
     <script type="text/javascript" src="/ny/js/public.js"></script>
-    <script language="JavaScript">
-        function doDBClick(url, operator, type) {
-            if (operator == false) {
-                document.forms[0].action = url + "&op=view";
-                document.forms[0].submit();
-            } else {
-                document.forms[0].action = url;
-                document.forms[0].submit();
-            }
+    <script >
+        function goPage() {
+            var page=document.getElementById("page").value;
+            window.location.href="${pageContext.request.contextPath}/ny/workersvl?reqType=getAllTrades&pageNum="+page;
         }
     </script>
 </head>
@@ -102,7 +97,7 @@
             <input type="hidden" name="orderFid" value=".submit_date">
             <table width="90%" style="font-size:12px;" border="0" cellspacing="3" cellpadding="2">
                 <tr>
-                    <td nowrap width="45%" align="center"> 当前第1页 共5记录 分1页显示</td>
+                    <td nowrap width="45%" align="center"> 当前第${page.pageNum}页 共${page.totalPage}记录 分${page.pageSize}页显示</td>
                     <td nowrap width="55%" align="right"><input type="hidden" name="currentPage" value="1">
                         <input type="hidden" name="paginationAction" value="">
                         <c:if test="${requestScope.page.pageNum <= 1}">
@@ -113,9 +108,8 @@
                             <a href="${pageContext.request.contextPath}/ny/workersvl?reqType=getAllTrades&pageNum=${page.pageNum-1}">上一页</a>
                             <a href="#">下一页</a>
                         </c:if>
-                        <a href="javascript:this.document.AwaitForm.submit()" oncontextmenu="return false" onClick="if(this.document.AwaitForm.pageSelect.value==''){ alert('页码必须输入');return false;}
- else {this.document.AwaitForm.paginationAction.value='gotoPage';}">前往</a>
-                        <input type=text size='4' onlytype='int' onfocus='checkTextBoxInput()' name='pageSelect'
+                        <button value="前往" onclick="goPage()">前往</button>
+                        <input type="text"  id="page" size='4' onlytype='int' name='pageSelect'
                                value=''/>
                         页
                     </td>

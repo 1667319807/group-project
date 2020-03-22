@@ -2,7 +2,7 @@ package com.hbpu.service.impl;
 
 import com.hbpu.pojo.Notice;
 import com.hbpu.dao.NoticeDao;
-import com.hbpu.pojo.PageBean;
+import com.hbpu.util.PageBean;
 import com.hbpu.service.NoticeService;
 
 import java.util.List;

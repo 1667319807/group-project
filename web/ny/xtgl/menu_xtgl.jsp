@@ -112,7 +112,7 @@ body {
     <td  width="70" nowrap id="menubar_4"   class="Menu_OutTd">|<a href="yhgl.jsp" target="main"> 用户管理</a></td>
     <td  width="70" nowrap id="menubar_5"   class="Menu_OutTd">|<a href="gsgl.jsp" target="main"> 公司管理</a></td>
 
-    <td width="70" nowrap class="Menu_OutTd">|<a href="czgl.jsp" target="main"> 充值管理</a></td>
+    <td width="70" nowrap class="Menu_OutTd">|<a href="/ny/rechargesvl?reqType=getAll" target="main"> 充值管理</a></td>
     <td width="70" nowrap class="Menu_OutTd">|<a href="xfcx.jsp" target="main"> 消费查询</a></td>
     <td width="70" nowrap class="Menu_OutTd">|<a href="basedate_list.jsp" target="main"> 数据字典</a></td>
 

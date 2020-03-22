@@ -115,7 +115,6 @@
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="menutd">
     <tr>
         <td width="14" class="Menu_OutTd" id="menutd1">&nbsp;</td>
-        <td width="70" nowrap id="menubar_1" class="Menu_OutTd">|<a href="grxx_cx.jsp" target="main">高级搜索</a></td>
         <td width="70" nowrap id="menubar_2" class="Menu_OutTd">|<a href="grxx_cx.jsp" target="main">用工检索</a></td>
         <td width="70" nowrap id="menubar_3" class="Menu_OutTd">|<a href="/ny/workersvl?reqType=getAllTrades" target="main"> 用工管理</a></td>
         <td width="70" nowrap id="menubar_4" class="Menu_OutTd">|<a href="/ny/employerSvl?reqType=getAllEmployers" target="main"> 客户管理</a></td>

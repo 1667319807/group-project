@@ -150,8 +150,8 @@
                 丧偶
                 &nbsp;&nbsp;
                 <input type="radio" name="marriage" id="radio11" value="5"/>
-                其它：&nbsp;
-                <input name="othermarriage" type="text" id="textarea18" value="" size="30" class="pi"></td>
+                <%--其它：&nbsp;
+                <input name="othermarriage" type="text" id="textarea18" value="" size="30" class="pi"></td>--%>
         </tr>
         <tr>
             <td height="23" align="right" bgcolor="#FFFFFF">证照状况：</td>
@@ -204,8 +204,7 @@
                             打蜡 &nbsp;&nbsp;&nbsp;
                             <input type="checkbox" name="personskill" value="通渠"/>
                             通渠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            其它：
-                            <input name="otherskill" type="text" id="textarea26" value="" size="30" class="pi"></td>
+                            <%--其它：<input name="otherskill" type="text" id="textarea26" value="" size="30" class="pi"></td>--%>
                     </tr>
                 </table>
             </td>
