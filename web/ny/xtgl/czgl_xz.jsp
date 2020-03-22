@@ -67,7 +67,7 @@ function doDBClick(url,operator,type) {
   <tr>
     <td width="67%" align="center" class="text" nowrap><span class="STYLE3">
       <input type="submit" name="searchbtn3" value="保  存" class="button_new" onClick="javascript:alert('充值成功！');history.back();">
-      <input type="submit" name="searchbtn3" value="返  回" class="button_new"onClick="javascript:history.back();" >
+      <input type="submit" name="searchbtn3" value="返  回" class="button_new"onClick="javascript:window.history.back();" >
       <input type="hidden" name="mod" value="no">
 &nbsp;&nbsp; </span></td>
   </tr>

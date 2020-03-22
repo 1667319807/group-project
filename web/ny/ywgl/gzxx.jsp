@@ -101,7 +101,7 @@ function doDBClick(url,operator,type) {
           <input type="hidden" name="orderFid" value=".submit_date">
           <table width="90%" style="font-size:12px;" border="0" cellspacing="3" cellpadding="2">
             <tr>
-              <td nowrap width="45%" align="center"> 当前第${page.pageNum}页 共${page.totalCount}记录 分${page.totalPage}页显示</td>
+              <td nowrap width="45%" align="center"> 当前第${page.pageNum}页 共${page.totalCount}记录 分${page.totalPage}显示</td>
               <td nowrap width="55%" align="right"><input type="hidden" name="currentPage" value="1">
                   <input type="hidden" name="paginationAction" value="">
                 <c:if test="${requestScope.page.pageNum <= 1}">

@@ -76,7 +76,7 @@ function doDBClick(url,operator,type) {
           <input type="hidden" name="orderFid" value=".submit_date">
           <table width="90%" style="font-size:12px;" border="0" cellspacing="3" cellpadding="2">
             <tr>
-              <td nowrap width="45%" align="center"> 当前第1页 共5记录 分1页显示 </td>
+              <td nowrap width="45%" align="center"> 当前第${page.pageNum}页 共${page.totalCount}记录 分${page.totalPage}显示</td>
               <td nowrap width="55%" align="right"><input type="hidden" name="currentPage" value="1">
                   <input type="hidden" name="paginationAction" value="">
                   <img src="../image/First_no.gif" alt="第一页" width="18" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Previous_no.gif" alt="上一页" width="14" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Next_no.gif" alt="下一页" width="14" height="13" border="0">&nbsp&nbsp&nbsp <img src="../image/Last_no.gif" alt="最后一页" width="18" height="13" border="0">&nbsp&nbsp&nbsp <a href="javascript:this.document.AwaitForm.submit()" oncontextmenu="return false" onClick="if(this.document.AwaitForm.pageSelect.value==''){ alert('页码必须输入');return false;}

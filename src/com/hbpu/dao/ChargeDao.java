@@ -21,7 +21,7 @@ public class ChargeDao {
     basicDao dao=new basicDao();
     public List<Recharge> queryAll(){
         List<Recharge> list=new ArrayList<>();
-        String sql="SELECT recharge_id,company_account,commpany_name,card_count,card_standard,card_money,card_balance,operator_id,remark from card c inner join recharge r ,company com where        c.company_id=com.company_id and recharge_company_id=com.company_id";
+        String sql="SELECT recharge_id,company_account,company_name,card_count,card_standard,card_money,card_balance,operator_id,remark from card c inner join recharge r ,company com where        c.company_id=com.company_id and recharge_company_id=com.company_id";
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet res = null;
