@@ -12,4 +12,6 @@ import java.util.List;
 public interface NoticeService {
     List<Notice> getAllDetails(PageBean<Notice> page);
     int getCount();
+
+    List<Notice> getWithCond(String time1, String time2);
 }

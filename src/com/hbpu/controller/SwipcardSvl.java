@@ -41,7 +41,6 @@ public class SwipcardSvl extends HttpServlet {
         String companyName = request.getParameter("companyName");
         String companyAccount =request.getParameter("companyAccount");
         System.out.println("companyAccount = " + companyAccount);
-        System.out.println("companyAccount = " + companyAccount);
         String time1 = request.getParameter("time1");
         String time2 = request.getParameter("time2");
         Company company=new Company(null,companyAccount,companyName,null);

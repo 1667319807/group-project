@@ -22,7 +22,17 @@ public class NoticeSvl extends HttpServlet {
         String reqType = request.getParameter("reqType");
         if (reqType.equals("queryAllNotices")) {
             queryAllNotices(request, response);
+        }if(reqType.equals("queryWithCond")){
+            queryWithCond(request,response);
         }
+    }
+
+    private void queryWithCond(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String time1 = request.getParameter("time1");
+        String time2 = request.getParameter("time2");
+        List<Notice> listWithCond = service.getWithCond(time1, time2);
+        request.setAttribute("details",listWithCond);
+        request.getRequestDispatcher("/ny/ywgl/mrtz.jsp").forward(request,response);
     }
 
     private void queryAllNotices(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -37,13 +37,13 @@
 </table>
 <br/>
 
-
+<form action="/ny/noticesvl?reqType=queryWithCond" method="post">
 <table width="91%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" class="MENU_line">
     <tr>
         <td width="67%" align="right" class="text" nowrap>从
-            <input type="text" name="searchName" maxlength="20" size="12" value="" class="input">
+            <input type="text" name="time1" maxlength="20" size="12" value="" class="input">
             到
-            <input type="text" name="searchName2" maxlength="20" size="12" value="" class="input">
+            <input type="text" name="time2" maxlength="20" size="12" value="" class="input">
             &nbsp;
             &nbsp;
             &nbsp;
@@ -55,6 +55,7 @@
         </td>
     </tr>
 </table>
+</form>
 <br>
 <table width="91%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#bdc7d3">
     <tr align="center" class="tdtitle">

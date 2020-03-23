@@ -23,4 +23,10 @@ public class NoticeServiceImpl implements NoticeService {
     public int getCount() {
         return noticeDao.queryCount();
     }
+
+    @Override
+    public List<Notice> getWithCond(String time1, String time2) {
+        return noticeDao.queryWithCond(time1,time2);
+    }
+
 }

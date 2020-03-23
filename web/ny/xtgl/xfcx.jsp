@@ -17,6 +17,12 @@
             }
         }
     </script>
+    <script >
+        function goPage() {
+            var page=document.getElementById("page").value;
+            window.location.href="${pageContext.request.contextPath}/ny/swipcardsvl?reqType=getAll&pageNum="+page;
+        }
+    </script>
 </head>
 
 <body>
